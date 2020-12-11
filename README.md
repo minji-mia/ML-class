@@ -322,15 +322,15 @@ Fall of 2013 semester.  The original iPython notebooks were created in
 2012 by Hannes Schulz, Andreas Mueller and Nenard Birešev at the
 University of Bonn
 [original github repo](https://github.com/amueller/tutorial_ml_gkbionics).
-I have taken the original material and expanded it for our course.
+Dr.Harter have taken the original material and expanded it for our course.
 
 The materials have been updated for the Fall of 2015 semester.  Materials
 from Dr. Ng Coursera [machine learning](https://www.coursera.org/learn/machine-learning/home/welcome) course were used extensively for the updates and assignments.
 
-The materials have been updated in Fall 2019 and Fall 2020.  We are now using
+The materials have been updated in Fall 2019 and Fall 2020.  We used
 the Geron textbook *Hands-On Machine Learning with SciKit-Learn and Tensorflow*
 second edition as our primary textbook.  Materials in the course use the
 textbook, Dr. Ng course videos and our own videos.
 
-The materials have been updated in Fall 2020.
+The materials have been updated in Fall 2020. I completed all of assisnments and test files.
 It is indeed an honor to take Machine learning class from [Dr.Derek Harter](https://derekharter.github.io/).
