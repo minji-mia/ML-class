@@ -5,7 +5,7 @@ CSci 574: Machine Learning class from
 [Texas A&M University - Commerce](http://tamuc.edu), the
 [Department of Computer Science](https://new.tamuc.edu/department-of-computer-science-and-information-systems/).
 
-I would like to thank Dr. Derek Harter for teaching Machine learning class
+I would like to thank [Dr. Derek Harter](https://derekharter.github.io/) for teaching Machine learning class
 
 
 ## Getting Started
@@ -333,4 +333,4 @@ second edition as our primary textbook.  Materials in the course use the
 textbook, Dr. Ng course videos and our own videos.
 
 The materials have been updated in Fall 2020.
-It is indeed an honor to take Machine learning class from Dr.Derek Harter.
+It is indeed an honor to take Machine learning class from [Dr.Derek Harter](https://derekharter.github.io/).
