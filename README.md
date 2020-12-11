@@ -5,16 +5,7 @@ CSci 574: Machine Learning class from
 [Texas A&M University - Commerce](http://tamuc.edu), the
 [Department of Computer Science](https://new.tamuc.edu/department-of-computer-science-and-information-systems/).
 
-You should start by following the Getting Started instructions next,
-to get your required Scientific Python computing stack set up on your
-system.  We will be using JupyterHub and iPython notebooks for the
-majority of the assignments and lecture materials and activities for
-the course.  
-
-Additional information about the class textbooks and materials can also
-be found below in this README, or should also be available on the
-[MyLeoOnline](https://myleoonline.tamuc.edu/d2l/home)
-D2L course shell created for this semester's class.
+I would like to thank Dr. Derek Harter for teaching Machine learning class
 
 
 ## Getting Started
@@ -40,21 +31,6 @@ to perform the following steps:
 1. Install [git](https://git-scm.com/)
 distributed revision control system tools if they are not
 already available on your personal computing system.
-2. Install Oracle's [VirtualBox](https://www.virtualbox.org/)
-open source virtualization solution on your system to run the
-Vagrant virtual server box.
-3. Install the [Vagrant](https://www.vagrantup.com/)
-virtualization management tools.
-3. Clone this course's repository to your system using `git clone`.
-4. Use `vagrant up` to boot up and provision the Python stack
-and JupyterHub server vagrant box.
-
-The first 3 steps are system dependent, but should only require use of
-a standard installer to accomplish.  Once you have git, VirtualBox
-and Vagrant on your  system, you should be able to clone the class
-repository, start the vagrant virtual box and provision it, and then
-run and access your JupyterHub python stack server in a similar manner
-no matter which OS you are using.
 
 #### 1. Download and Install git client
 
@@ -119,123 +95,8 @@ $ sudo apt install git
 $ sudo yum install git
 ```
 
-#### 2. Install VirtualBox Virtualization Tools
 
-You will need to install VirtualBox on your system to use the vagrant box
-setup given to you for this class.  A standard app installer/package is provided
-on the [VirtualBox Downloads](https://www.virtualbox.org/wiki/Downloads)
-site for Windows, MacOS X and Linux distributions.  Download the
-installer and install it in the standard way for your operating system.
-You should be able to accept the defaults offered by the installer for your
-system.
-
-Once installed, a graphical interface for VirtualBox is available that you
-should be able to search for from your start menu and run.  Also a command
-line tool should be installed and working.  Open a command line terminal
-or shell on your system and test that the `VBoxManage` command is available
-and in your path.  On Linux and MacOS X it should be installed in a standard
-location that will be on your usual system path:
-```
-# on MacOX and Linux use the which command, on Windows use where instead
-# MacOS / Linux
-$ which VBoxManage
-/usr/bin/VBoxManage
-$ VBoxManage --version
-6.1.12r138449
-```
-
-On Windows OS the installer does not add the location of the VirtualBox command
-line tools to your PATH.  You can either add `C:\Program Files\Oracle\VirtualBox` to your PATH, or you can change to this directory or specify the full path name to run the `VBoxManage.exe` tool from the command
-line:
-```
-# Windows
-> "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" --version
-6.1.12r138449
-```
-The location of the PATH where the executable resides and the version
-number may differ slightly.  As of the writing of this README,
-you should have at least VirtualBox version 6.1.12 or higher installed on
-your system.
-
-
-#### 3. Install Vagrant Virtualization Management Tools
-
-Vagrant greatly simplifies managing and spinning up virtual box instances.
-You have been given a Vagrantfile in the class repository that should
-spin up and provision a full Python Stack vagrant box running a JupyterHub
-server.
-
-Again standard install packages are provided on the
-[Vagrant Download](https://www.vagrantup.com/downloads)
-site for Windows, MacOS X and Linux systems.
-Download the installer or package appropriate for your system and
-install it.  Accept the suggested defaults for all questions for the install.
-Both VirtualBox and Vagrant may require a system reboot (especially on Windows),
-so once you have Vagrant successfully installed, it is a good idea to reboot
-your system at this point before continuing.
-
-**NOTE Windows Users** Before rebooting, you should check and disable Hyper-V
-if it is enabled on your system.  If you don't see the Hyper-V feature, you
-may instead have Virtualization Based Security (VBS).  If so, you may (or may not)
-see issues when you try and install/bootstrap your virtual box. If you have VBS
-and run into inssues, contact the instructor.
-
-- [Virtualization applications do not work together with Hyper-V](https://support.microsoft.com/en-us/help/3204980/virtualization-applications-do-not-work-together-with-hyper-v-device-g)
-
-**Reboot System**
-
-When you reboot your system to make sure that the VirtualBox and the
-Vagrant installs completely take effect, it would be a good idea to also
-check your BIOS settings and make sure that you have hardware virtualization
-enabled.  VirtualBox and Vagrant will not work if hardware virtualizaiton
-is not enabled.  This is probably enabled now adays by default?  but best
-to explicitly check it.
-
-When booting up, enter your system BIOS
-
-- [How to Enter the BIOS on Any PC: Access Keys by Manufacturer](https://www.tomshardware.com/reviews/bios-keys-to-access-your-firmware,5732.html)
-
-Usually the `F2` key should work, but if not there should usually be
-a message on your first boot screen telling you what the BIOS access
-key is.
-
-In your BIOS, find the setting for hardware Virtualization
-
-- [Enabling Virtualization in your PC BIOS](https://bce.berkeley.edu/enabling-virtualization-in-your-pc-bios.html)
-
-This setting is usually in your BIOS menu under the Processor or CPU settings.
-And as the link says, it will probably be called either `VT-x` or  `AMD-V`.
-Make sure it is enabled.
-
-**After Reboot**
-
-Again once installed it is a good idea to confirm that the command line
-tools are available before moving on.  Since `vagrant` is mainly intended
-to be used from the command line, this time if you are a Windows user you should
-find that the command has been added to your PATH for you.
-
-To test, use the `where` or `which` command, and try running `vagrant` asking
-for the installed version.  If the command cannot be found, you need to
-stop and check your install and insure your PATH is set correctly.
-
-```
-# MacOS / Linux use which to see if vagrant tool in PATH
-$ which vagrant
-/usr/bin/vagrant
-# WindowsOS use where instead
-> where vagrant
-C:\HashiCorp\Vagrant\bin\vagrant.exe
-```
-```
-# if it is on your path, test you can run it by determining which version you are on
-$ vagrant --version
-Vagrant 2.2.9
-```
-As of the writing and testing of this README, you should have installed Vagrant
-version 2.2.9 or higher on your system now.
-
-
-#### 4. Clone the Class Git Repository
+#### 2. Clone the Class Git Repository
 
 At this point you should successfully have all of the tools you need for the
 class installed.  We will now use them to clone the class repository and
@@ -270,137 +131,6 @@ The clone is basically like a download of the files.  If you are in the
 repos directory, there will now be a new subdirectory named `ml-python-class`
 that contains all of the files for the class that were just downloaded.
 
-#### 5. Start and Provision the JuptyerHub Server vagrant box
-
-Assuming you just completed the previous step 4, you are now in the `repos`
-directory, and you just cloned a copy of the `ml-python-class` directory.
-Change into the class repository directory from the command line:
-```
-$ cd ml-python-class
-```
-
-In the next step we will attempt to start and provision your vagrant box.
-The box will download and start a new virtual machine, install the Anaconda Python distribution
-and needed Scientific Python libraries.  It will create a JupyterHub server
-and start the server running.  
-
-To start the vagrant box and have it provision itself run the following command
-from a terminal in your `ml-python-class` repository directory:
-```
-$ vagrant up
-```
-
-This step will take some time.  On my rural Texas DSL I tend to get 100 to
-500 k/sec download when I run this.  The base `virtualbox.box` image will
-first be downloaded.  This usually takes about 30-60 minutes or so from my
-home to complete.  If the base image successfully downloads, the installer
-will then attempt to install Anaconda Python and set up a JupyterHub server.
-This will again take probably 30-60 minutes depending on your speed.
-
-If no errors occurs, the last thing you will see when the install finishes is a message from our Bootstrap provisioning script:
-```
-...
-Anaconda Python3 installed successfully, JupyterHub/JupyterLab server running!
-```
-
-If you instead see error messages in your terminal at the end, please copy them
-and e-mail them to your instructor for advice on proceeding.
-
-At this point, assuming no errors, your vagrant box instance is actually
-up and running.  However it is a good idea to shutdown the server and
-bring it back up at this point to test that things are working cleanly
-and as expected.  Start by doing a halt to shutdown the box:
-
-```
-$ vagrant halt
-==> default: Unmounting NFS shared folders from guest...
-==> default: Forcing shutdown of VM...
-```
-
-You should see that the box is shutdown and not get any error messages.
-Then bring the box back up again.  Once the base image is downloaded,
-and the box is provisioned and set up, bringing it up again should be
-relatively quick.  It will boot in a minute or less usually.
-
-```
-$ vagrant up
-Bringing machine 'default' up with 'virtualbox' provider...
-==> default: Checking if box 'ubuntu/focal64' version '20200702.0.0' is up to date...
-==> default: Clearing any previously set forwarded ports...
-==> default: Clearing any previously set network interfaces...
-==> default: Preparing network interfaces based on configuration...
-    default: Adapter 1: nat
-==> default: Forwarding ports...
-    default: 8000 (guest) => 8000 (host) (adapter 1)
-    default: 22 (guest) => 2222 (host) (adapter 1)
-==> default: Running 'pre-boot' VM customizations...
-==> default: Booting VM...
-==> default: Waiting for machine to boot. This may take a few minutes...
-    default: SSH address: 127.0.0.1:2222
-    default: SSH username: vagrant
-    default: SSH auth method: private key
-==> default: Machine booted and ready!
-==> default: Checking for guest additions in VM...
-==> default: Mounting shared folders...
-    default: /vagrant => /home/dash/repos/ml-python-class
-==> default: Machine already provisioned. Run `vagrant provision` or use the `--provision`
-==> default: flag to force provisioning. Provisioners marked to run always will still run.
-
-```
-
-Things to check here.  You might get some warnings, like your base box is
-out of date, or other things.  Usually warnings are not issues you need to
-worry about, but if you have a question send me the warning message.
-
-What you want to ensure here includes:
-
-- Make sure that port 8000 on the guest is shown as forwarding to port 8000
-  on the host.  The guest is the virtualbox machine you are running, and the
-  host is your computer/os.  JupyterLab is served on port 8000 on the guest, and
-  this is how we access it on your host by forwarding that port between the
-  two.
-- You should see that port 22 on the guest is forwarded to some port on your
-  host.  This provides ssh access into your guest machine if needed.
-- Hopefully you will see that the GuestAdditions are running ok.  These
-  can sometimes have problems.  
-- Finally your repository should be mounted from your host machine to
-  your guest.  This is the line that says
-  ```
-  default: /vagrant => /home/dash/repos/ml-python-class
-  ```
-  The location of the directory on your host will differ, but it should be
-  the location of the repository you cloned in step 4 above.  This
-  sharing and mounting of your repository directory allows you to access
-  and open the files from the JupyterLab IDE inside of the vagrant box.
-
-If you see that the machines is booted and ready! now, you can then
-proceed to try and log into your JupyterLab server.
-
-
-## Using your JupyterHub Class Development Server
-
-If your vagrant box provisions itself and boots up correctly, it will
-be running a JupyterHub server providing JupyterLab
-with a full Anaconda Python3 data science
-stack installed.  The server is mapped to port 8000 of your host machine.
-So if the vagrant box is up and running, you should be able to navigate to
-
-[http://localhost:8000](http://localhost:8000)
-
-from a web browser to access your system.  
-
-The system is configured with a standard username/password:
-
-**username:** vagrant
-
-**password:** vagrant
-
-Also the system remotely mounts your repository directory to the guest
-JupyterHub machine.  So your `ml-python-class` directory that you cloned
-will be visible from your JupyterHub server.  This provides an easy way to
-get files into and out of your running dev environment.  Simply placing a
-file in your `ml-python-class` directory should make it visible and usable
-from your JupyterHub server instance.
 
 The JupyterHub server uses the
 [Anaconda](https://www.anaconda.com/)
@@ -540,11 +270,6 @@ go here.  Some data files are local to the repository, but for larger data
 files, scripts may be used to download a larger data file to this
 repository data directory for local use.
 
-**docs**/
-
-Additional documentation for the class.  Class syllabus, and possible
-assingment descriptions, slides and handouts will be placed here.
-
 **figures**/
 
 All static image files used in documents and notebooks. Images may
@@ -587,12 +312,6 @@ Top level markdown files holding general project information.
 README.md markdown files may also be given in subdirectories for
 further information about aspects of the project.
 
-**Vagrantfile**
-
-A standard vagrant init file.  Contains the configuration and
-specifications to download and provision a vagrant box running
-Anaconda Python3 and a JupyterHub/JupyterLab server.
-
 
 #### History
 
@@ -613,6 +332,5 @@ the Geron textbook *Hands-On Machine Learning with SciKit-Learn and Tensorflow*
 second edition as our primary textbook.  Materials in the course use the
 textbook, Dr. Ng course videos and our own videos.
 
-#### Contact
-
-`derek dot harter @ tamuc dot edu`
+The materials have been updated in Fall 2020.
+It is indeed an honor to take Machine learning class from Dr.Derek Harter.
