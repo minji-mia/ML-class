@@ -1,4 +1,4 @@
-# CSci 574: Machine Learning
+# CSCI 574: Machine Learning
 
 This repository contains materials and instructions for our graduate level
 CSci 574: Machine Learning class from
